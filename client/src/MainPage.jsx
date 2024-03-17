@@ -1,6 +1,4 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import { logOut } from './redux/authSlice'
 import { useSelector } from 'react-redux'
 import { Profile_user } from './Profile_user'
 import Profile_admin from './Profile_admin'

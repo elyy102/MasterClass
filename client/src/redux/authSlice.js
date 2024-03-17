@@ -41,7 +41,7 @@ export const authSlice = createSlice({
             localStorage.setItem("token", payload.token)
             localStorage.setItem("name", payload.user.name)
             localStorage.setItem("role", payload.user.role)
-            localStorage.setItem("role", payload.user.id)
+            localStorage.setItem("id", payload.id)
 
             state.error = undefined
             state.loading = false

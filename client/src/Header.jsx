@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useState } from "react"
 import  icon_profile from './assets/icon_profile.svg'
 
 export const Header = () => {
