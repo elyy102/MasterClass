@@ -45,7 +45,7 @@ app.get("/admin_info/", async (req, res) => {
     res.send(data)
 })
 
-app.get('/user_info', async (req, res) => { 
+app.get('/user_info/', async (req, res) => { 
     const data = await sql`select * from Users` 
     res.send(data) 
 })
@@ -59,12 +59,12 @@ app.post("/add_mk/", roleMiddleware(['ADMIN']), upload.single('image'), async (r
     res.sendStatus(200)
 })
 
-app.post("/records/", roleMiddleware(['USER']), async (req, res) => {
+/*app.post("/records/", roleMiddleware(['USER']), async (req, res) => {
     const {name, phone_number, email} = req.body
     console.log(req.headers.authorization);
     const data = await sql`INSERT INTO Records(name, phone_number, email) values(${name}, ${phone_number}, ${email})`
     res.sendStatus(200)
-})
+}) */
 
 app.get("/masterclasses_all/", roleMiddleware(['USER', 'ADMIN']), async (req, res) => {
     const token = req.headers.authorization.split(' ')[1]

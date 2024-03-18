@@ -6,7 +6,7 @@ const ModalRecord = ({ show, onCloseButtonClick }) => {
       return null;
     }
 
-    const [name, setName] = useState('')
+    /*const [name, setName] = useState('')
     const [phone_number, setPhoneNumber] = useState('')
     const [email, setEmail] = useState('')
   
@@ -31,7 +31,7 @@ const ModalRecord = ({ show, onCloseButtonClick }) => {
       setName('')
       setPhoneNumber('')
       setEmail('') 
-    }    
+    } */   
 
     return (
       <>
@@ -41,20 +41,10 @@ const ModalRecord = ({ show, onCloseButtonClick }) => {
             <p className="p_modal_head">Запись</p>
             <button className="close_card" onClick={onCloseButtonClick}>х</button>
           </div>
-          <form className="modal_content" encType='multipart/form-data' 
-          onSubmit={(e) => {e.preventDefault()
-          console.log("gut")
-          add(name, phone_number, email)
-          }}>
-            <input className='login_input' placeholder='Введите ФИО...' type="text" value={name} onChange={(e) => {
-            setName(e.target.value)
-          }} required />
-            <input  className='password_input' placeholder='Введите номер телефона...' type="text" value={phone_number} onChange={(e) => {
-            setPhoneNumber(e.target.value)
-          }} required />
-            <input className='login_input' placeholder='Введите email...' type="email" value={email} onChange={(e) => {
-            setEmail(e.target.value)
-          }} required />
+          <form className="modal_content" >
+            <input className='login_input' placeholder='Введите ФИО...' type="text"  />
+            <input  className='password_input' placeholder='Введите номер телефона...' type="text" />
+            <input className='login_input' placeholder='Введите email...' type="email" />
             <button className='logout_btn' type="submit">Записаться</button>
         </form>
         </div>

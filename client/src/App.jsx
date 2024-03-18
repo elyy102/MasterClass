@@ -12,8 +12,9 @@ import Favourites from './Favourites'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Afisha />
+    element: <Navigate to="/reg" />
   },
+
   {
     path: '/reg',
     element: <Reg />
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
   {
     path: '/auth',
     element: <Log />
-  },
+  }
 ])
 
 const authRouter = createBrowserRouter([
@@ -83,7 +84,7 @@ function App() {
 
 
   return (
-    token ? role === "ADMIN" ? <RouterProvider router={authRouterAdmin} /> : <RouterProvider router={authRouter} /> :
+    token ? (role === "ADMIN" ? <RouterProvider router={authRouterAdmin} /> : <RouterProvider router={authRouter} />) :
     <RouterProvider router={router} />
   )
 }

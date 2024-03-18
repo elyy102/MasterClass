@@ -145,6 +145,7 @@ input::placeholder {
 }
 
 .image_container {
+  position: relative;
   margin-bottom: 20px;
 }
 
@@ -170,6 +171,38 @@ input::placeholder {
   font-weight: 400;
   background: #556832;
   border-radius: 15px;
+}
+
+.card_like {
+  width: 45px; 
+height: 45px;
+background: #FFFAF6;
+border-radius: 50px;
+position: absolute ;
+z-index: 100; 
+top: 20px; 
+right: 20px; 
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.card_price {
+  width: 74px; 
+height: 30px;
+background: #556832;
+border-radius: 15px;
+color: #FFFAF6;
+position: absolute ;
+z-index: 100; 
+bottom: 20px; 
+left: 20px; 
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+  font-weight: 500;
+  padding: 3px 10px;
 }
 
 .title {

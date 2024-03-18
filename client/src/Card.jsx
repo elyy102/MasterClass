@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useEffect, useState } from "react"
-import  mk from './assets/mk-2.svg'
+import  heart from './assets/heart.svg'
 import Modal from "./ModalRecord"
 import Modal_2 from "./ModalMore"
 
@@ -58,6 +58,7 @@ useEffect(() => {
                 <div className="image_container">
                   <Modal_2 show={showModal2} onCloseButtonClick={toggleShowModal2} />
                   <img src={el.image} alt="" onClick={toggleShowModal2}/>
+                  <div class="card_like"><img src={heart} alt="" /></div>
                   <div class="card_price">{el.price}</div>
                 </div>
         
